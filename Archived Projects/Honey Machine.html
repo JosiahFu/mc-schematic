@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>MC Layer Tiling</title>
+		<link rel="stylesheet" href="style.css">
+		<style>
+			#note-1.note:hover::before {content: "1.Place any block here to start the engine";}
+		</style>
+	</head>
+	<body>
+		<h1>Flying Train Design</h1>
+		<h3>Key</h3>
+		<table class="key">
+			<tr>
+				<td class="iron"></td>
+				<td class="text">Block of Iron</td>
+			</tr>
+			<tr>
+				<td class="slime"></td>
+				<td class="text">Slime Block</td>
+			</tr>
+			<tr>
+				<td class="honey"></td>
+				<td class="text">Honey Block</td>
+			</tr>
+			<tr>
+				<td class="piston"></td>
+				<td class="text">Piston</td>
+			</tr>
+			<tr>
+				<td class="s-piston"></td>
+				<td class="text">Sticky Piston</td>
+			</tr>
+			<tr>
+				<td class="redstone"></td>
+				<td class="text">Block of Redstone</td>
+			</tr>
+			<tr>
+				<td class="observer up"></td>
+				<td class="text">Observer</td>
+			</tr>
+			<tr>
+				<td class="note">#</td>
+				<td>Note</td>
+			</tr>
+		</table>
+		<h2>Layer 0</h2>
+		<table>
+			<tr>
+				<td class="slime"></td>
+				<td class="slime"></td>
+				<td class="piston west"></td>
+				<td class="observer east"></td>
+				<td class="note dark" id="note-1">1</td>
+			</tr>
+			<tr>
+				<td class="observer west"></td>
+				<td class="piston east"></td>
+				<td class="honey"></td>
+				<td class="honey"></td>
+				<td></td>
+			</tr>
+		</table>
+		<h2>Layer 1</h2>
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<div class="footnotes">
+			<h3>Notes</h3>
+			<ol>
+				<li>Place any block here to start the engine</li>
+			</ol>
+		</div>
+	</body>
+</html>	

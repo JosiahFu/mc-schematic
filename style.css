@@ -1,0 +1,40 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+body {
+	background-color: white;
+	font-family: "Open Sans", sans-serif;
+	margin: 50px;
+	color: #242424;
+	font-size: 16px;
+}
+
+h2 {
+	margin-top: 50px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+.key td.text {
+	padding: 0 10px;
+}
+
+table, td {
+	border: 1px solid #e0e0e0;
+}
+
+td {
+	padding: 20px;
+	background-size: contain;
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+	background-repeat: no-repeat;
+}
+
+td.text {
+	height: auto;
+	width: 200px;
+}

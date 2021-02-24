@@ -1,0 +1,519 @@
+.north {
+	transform: rotate(0deg);
+}
+
+.east {
+	transform: rotate(90deg);
+}
+
+.south {
+	transform: rotate(180deg);
+}
+
+.west {
+	transform: rotate(270deg);
+}
+
+/*PISTON*/
+
+.piston {
+	background-image: url(images/blocks/piston/piston-side.png);
+}
+
+.piston-ext {
+	background-image: url(images/blocks/piston/piston-ext.png);
+}
+
+.piston-head {
+	background-image: url(images/blocks/piston/piston-head.png);
+}
+
+.piston.up, .piston-head.up {
+	background-image: url(images/blocks/piston/piston-top.png);
+}
+	
+.piston.down, .piston-ext.down {
+	background-image: url(images/blocks/piston/piston-bottom.png);
+}
+
+.piston-head.down {
+	background-image: url(images/blocks/piston/piston-head-bottom.png);
+}
+
+.piston-ext.up {
+	background-image: url(images/blocks/piston/piston-ext-top.png);
+}
+
+/*S-PISTON*/
+
+.s-piston {
+	background-image: url(images/blocks/piston/s-piston/s-piston-side.png);
+}
+
+.s-piston-ext {
+	background-image: url(images/blocks/piston/s-piston/s-piston-ext.png);
+}
+
+.s-piston-head {
+	background-image: url(images/blocks/piston/s-piston/s-piston-head);
+}
+
+.s-piston-head.down {
+	background-image: url(images/blocks/piston/s-piston/s-piston-head-bottom.png);
+}
+
+.s-piston.up, .s-piston-head.up {
+	background-image: url(images/blocks/piston/s-piston/s-piston-top.png);
+}
+
+.s-piston-ext.up {
+	background-image: url(images/blocks/piston/s-piston/s-piston-ext-top.png);
+}
+
+.s-piston-head {
+	background-image: url(images/blocks/piston/s-piston/s-piston-head.png);
+}
+
+.s-piston.down, .s-piston-ext.down {
+	background-image: url(images/blocks/piston/s-piston/s-piston-bottom.png);
+}
+
+/*OBSERVER*/
+
+.observer {
+	background-image: url(images/blocks/observer/observer-top.png);
+}
+
+.observer.up {
+	background-image: url(images/blocks/observer/observer-front.png);
+}
+
+.observer.down {
+	background-image: url(images/blocks/observer/observer-back.png);
+}
+
+.observer.side {
+	background-image: url(images/blocks/observer/observer-side.png);
+	transform: rotate(0deg);
+}
+
+.observer.side.west {
+	transform: rotateY(180deg);
+}
+
+/*DISPENSER*/
+
+.dispenser {
+	background-image: url(images/blocks/dispenser/dispenser-top.png);
+}
+
+.dispenser.up {
+	background-image: url(images/blocks/dispenser/dispenser-up-top.png);
+}
+
+.dispenser.down {
+	background-image: url(images/blocks/dispenser/dispenser-up-bottom.png);
+}
+
+.dispenser.side.down {
+	background-image: url(images/blocks/dispenser/dispenser-back.png);
+}
+
+.dispenser.side {
+	background-image: url(images/blocks/dispenser/dispenser-up-side.png);
+}
+
+.dispenser.side.up {
+	background-image: url(images/blocks/dispenser/dispenser-front.png);
+}
+
+.dispenser.side.east, .dispenser.side.west {
+	background-image: url(images/blocks/dispenser/dispenser-side.png);
+	transform: rotate(0deg);
+}
+
+.dispenser.side.west {
+	transform: rotateY(180deg);
+}
+
+/*DROPPER*/
+
+.dropper {
+	background-image: url(images/blocks/dropper/dropper-top.png);
+}
+
+.dropper.up {
+	background-image: url(images/blocks/dropper/dropper-up-top.png);
+}
+
+.dropper.down {
+	background-image: url(images/blocks/dropper/dropper-up-bottom.png);
+}
+
+.dropper.side.down {
+	background-image: url(images/blocks/dropper/dropper-back.png);
+}
+
+.dropper.side {
+	background-image: url(images/blocks/dropper/dropper-up-side.png);
+}
+
+.dropper.side.up {
+	background-image: url(images/blocks/dropper/dropper-front.png);
+}
+
+.dropper.side.east, .dropper.side.west {
+	background-image: url(images/blocks/dropper/dropper-side.png);
+	transform: rotate(0deg);
+}
+
+.dropper.side.west {
+	transform: rotateY(180deg);
+}
+
+.redstone-b {
+	background-image: url(images/blocks/redstone-b.png);
+}
+
+/*REDSTONE-D*/
+
+.redstone-d.n {
+	background-image: url(images/blocks/redstone-d/redstone-d-n.png);
+}
+
+.redstone-d.l {
+	background-image: url(images/blocks/redstone-d/redstone-d-l.png);
+}
+
+.redstone-d.c {
+	background-image: url(images/blocks/redstone-d/redstone-d-c.png);
+}
+
+.redstone-d.j {
+	background-image: url(images/blocks/redstone-d/redstone-d-j.png);
+}
+
+.redstone-d.cr {
+	background-image: url(images/blocks/redstone-d/redstone-d-cr.png);
+}
+
+.redstone-d.side {
+	transform: none;
+}
+
+.redstone-d.side.south {
+	background-image: url(images/blocks/redstone-d/redstone-d-side.png);
+}
+
+.redstone-d.side.west {
+	background-image: url(images/blocks/redstone-d/redstone-d-side-l.png);
+}
+
+.redstone-d.side.east {
+	background-image: url(images/blocks/redstone-d/redstone-d-side-r.png);
+}
+
+.redstone-d.side.north {
+	background-image: url(images/blocks/redstone-d/redstone-d-side-v.png);
+}
+
+/*REDSTONE-T*/
+
+.redstone-t {
+	background-image: url(images/blocks/torch/redstone-t/redstone-t-wall-top.png);
+}
+
+.redstone-t.side {
+	background-image: url(images/blocks/torch/redstone-t/redstone-t-side.png);
+	transform: rotate(0deg);
+}
+
+.redstone-t.up {
+	background-image: url(images/blocks/torch/redstone-t/redstone-t-top.png);
+}
+
+.redstone-t.side.up, .redstone-t.side.down {
+	background-image: url(images/blocks/torch/redstone-t/redstone-t-wall-front.png);
+}
+
+.redstone-t.side.east, .redstone-t.side.west {
+	background-image: url(images/blocks/torch/redstone-t/redstone-t-wall-side.png);
+}
+
+.redstone-t.side.west {
+	transform: rotateY(180deg);
+}
+
+/*TORCH*/
+
+.torch {
+	background-image: url(images/blocks/torch/torch-wall-top.png);
+}
+
+.torch.side {
+	background-image: url(images/blocks/torch/torch-side.png);
+	transform: rotate(0deg);
+}
+
+.torch.up {
+	background-image: url(images/blocks/torch/torch-top.png);
+}
+
+.torch.side.up, .torch.side.down {
+	background-image: url(images/blocks/torch/torch-wall-front.png);
+}
+
+.torch.side.east, .torch.side.west {
+	background-image: url(images/blocks/torch/torch-wall-side.png);
+}
+
+.torch.side.west {
+	transform: rotateY(180deg);
+}
+
+/*LEVER*/
+.lever {
+	background-image: url(images/blocks/lever.png);
+}
+
+.lever.up {
+	background-image: url(images/blocks/lever-front.png);
+}
+
+/*BUTTON*/
+.button {
+	background-image: url(images/blocks/button.png)
+}
+
+.button.up {
+	background-image: url(images/blocks/button-front.png);
+}
+
+/*RAILS*/
+
+.rail.straight {
+	background-image: url(images/blocks/rail/rail.png);
+}
+
+.rail.corner {
+	background-image: url(images/blocks/rail/rail-corner.png);
+}
+
+.rail.activator {
+	background-image: url(images/blocks/rail/rail-activator.png);
+}
+
+.rail.detector {
+	background-image: url(images/blocks/rail/rail-detector.png);
+}
+
+.rail.powered {
+	background-image: url(images/blocks/rail/rail-powered.png);
+}
+
+/*REPEATER*/
+
+.repeater {
+	background-image: url(images/blocks/repeater/repeater-top.png);
+}
+
+.repeater.side {
+	background-image: url(images/blocks/repeater/repeater-side-1.png);
+	transform: none;
+}
+
+.repeater.side.west {
+	transform: rotateY(180deg);
+}
+
+.repeater.up {
+	background-image: url(images/blocks/repeater/repeater-front.png);
+}
+
+.repeater.down {
+	background-image: url(images/blocks/repeater/repeater-back.png);
+}
+
+/*COMPARATOR*/
+
+.comparator {
+	background-image: url(images/blocks/comparator/comparator-top.png);
+}
+
+.comparator.side {
+	background-image: url(images/blocks/comparator/comparator-side.png);
+	transform: none;
+}
+
+.comparator.side.west {
+	transform: rotateY(180deg);
+}
+
+.comparator.side.up {
+	background-image: url(images/blocks/comparator/comparator-front.png);
+}
+
+.comparator.side.down {
+	background-image: url(images/blocks/comparator/comparator-back.png);
+}
+
+/*HOPPER*/
+.hopper {
+	background-image: url(images/blocks/hopper/hopper-top.png);
+}
+
+.hopper.down {
+	background-image: url(images/blocks/hopper/hopper-top-down.png);
+}
+
+.hopper.side {
+	transform: none;
+}
+
+.hopper.side.south {
+	background-image: url(images/blocks/hopper/hopper-side-down.png);
+}
+
+.hopper.side.east {
+	background-image: url(images/blocks/hopper/hopper-side-right.png);
+}
+
+.hopper.side.west {
+	background-image: url(images/blocks/hopper/hopper-side-left.png);
+}
+
+.hopper.side.up {
+	background-image: url(images/blocks/hopper/hopper-side-front.png);
+}
+
+.hopper.side.down {
+	background-image: url(images/blocks/hopper/hopper-side-back.png);
+}
+
+/*CHEST*/
+.chest {
+	background-image: url(images/blocks/chest-top.png);
+}
+
+.chest.side {
+	background-image: url(images/blocks/chest-front.png);
+	transform: none;
+}
+
+.chest.side.west, .chest.side.east {
+	background-image: url(images/blocks/chest-side.png);
+}
+
+.chest.side.east {
+	transform: rotateY(180deg);
+}
+
+/*DAYLIGHT DETECTOR*/
+
+.day-detector {
+	background-image: url(images/blocks/day-detector/day-detector-side.png);
+}
+
+.day-detector.up {
+	background-image: url(images/blocks/day-detector/day-detector-top.png);
+}
+
+.night-detector {
+	background-image: url(images/blocks/day-detector/night-detector-side.png);
+}
+
+.night-detector.up {
+	background-image: url(images/blocks/day-detector/night-detector-top.png);
+}
+
+/*OTHER*/
+
+td {
+	background-image: url(images/blocks/air.png);
+}
+
+.slime {
+	background-image: url(images/blocks/slime.png);
+}
+
+.honey {
+	background-image: url(images/blocks/honey.png);
+}
+
+
+.p-andesite {
+	background-image: url(images/blocks/p-andesite.png);
+}
+
+.iron {
+	background-image: url(images/blocks/iron.png);
+}
+
+.cobblestone {
+	background-image: url(images/blocks/cobblestone.png);
+}
+
+.netherrack {
+	background-image: url(images/blocks/netherrack.png);
+}
+
+.target {
+	background-image: url(images/blocks/target.png);
+}
+
+.glass {
+	background-image: url(images/blocks/glass.png);
+}
+
+.tnt {
+	background-image: url(images/blocks/tnt-side.png);
+}
+
+.tnt.up {
+	background-image: url(images/blocks/tnt-top.png);
+}
+
+.tnt.down {
+	background-image: url(images/blocks/tnt-bottom.png);
+}
+
+.slab {
+	background-image: url(images/blocks/slab.png);
+}
+
+.slab.up, .slab.down {
+	background-image: url(images/blocks/slab-top.png);
+}
+
+.slab.down {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/blocks/slab-top.png);
+}
+
+.r-lamp {
+	background-image: url(images/blocks/r-lamp-off.png);
+}
+
+.r-lamp.north {
+	background-image: url(images/blocks/r-lamp-on.png);
+}
+
+.sculk-sensor {
+	background-image: url(images/blocks/sculk-sensor-side.png);
+}
+
+.sculk-sensor.up {
+	background-image: url(images/blocks/sculk-sensor-top.png);
+}
+
+
+.trapdoor {
+	background-image: url(images/blocks/trapdoor-side.png);
+}
+
+.trapdoor.up {
+	background-image: url(images/blocks/trapdoor-top.png);
+}
+
+.trapdoor.down {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/blocks/trapdoor-top.png);
+}

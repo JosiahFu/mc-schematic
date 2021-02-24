@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>MC Layer Tiling</title>
+		<link rel="stylesheet" href="style.css">
+		<style>
+			#note-1.note:hover::before {content: "1.Place this block last, when you want to start the engine";}
+		</style>
+	</head>
+	<body>
+		<h1>Flying Train Design</h1>
+		<h3>Key</h3>
+		<table class="key">
+			<tr>
+				<td class="p-andesite"></td>
+				<td class="text">Polished andesite</td>
+			</tr>
+			<tr>
+				<td class="slime"></td>
+				<td class="text">Slime Block</td>
+			</tr>
+			<tr>
+				<td class="piston"></td>
+				<td class="text">Piston</td>
+			</tr>
+			<tr>
+				<td class="s-piston"></td>
+				<td class="text">Sticky Piston</td>
+			</tr>
+			<tr>
+				<td class="redstone"></td>
+				<td class="text">Redstone Block</td>
+			</tr>
+			<tr>
+				<td class="glass"></td>
+				<td class="text">Glass</td>
+			</tr>
+			<tr>
+				<td class="note">#</td>
+				<td>Note</td>
+			</tr>
+		</table>
+		
+		<h2>Layer 0</h2>
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="piston east"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="p-andesite"></td>
+				<td class="piston east"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="p-andesite"></td>
+				<td class="piston east"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="slime"></td>
+				<td class="slime"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		
+		<h2>Layer 1</h2>
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="p-andesite"></td>
+			</tr>
+			<tr>
+				<td class="piston east"></td>
+				<td class="slime"></td>
+				<td class="s-piston west"></td>
+				<td class="piston east"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="slime"></td>
+				<td></td>
+				<td class="redstone"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="redstone"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="redstone"></td>
+				<td></td>
+				<td class="slime"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="p-andesite"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+			</tr>
+		</table>
+		
+		<h2>Layer 2</h2>
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="piston east"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="glass"></td>
+				<td class="piston east"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="glass"></td>
+				<td class="piston east"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="slime"></td>
+				<td class="slime"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="slime"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="glass"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td class="redstone note" id="note-1">1</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="redstone"></td>
+				<td class="slime"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="glass"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="slime"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="glass"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="piston east"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="glass"></td>
+				<td class="piston east"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="glass"></td>
+				<td class="piston east"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="slime"></td>
+				<td class="slime"></td>
+			</tr>
+		</table>
+		<h2>Layer 3</h2>
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="redstone"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="redstone"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="redstone"></td>
+				<td class="p-andesite"></td>
+				<td class="slime"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="glass"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="slime"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="glass"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="glass"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="redstone"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="redstone"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="redstone"></td>
+				<td class="p-andesite"></td>
+				<td class="slime"></td>
+			</tr>
+		</table>
+		<h2>Layer 4</h2>
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="piston east"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="p-andesite"></td>
+				<td class="piston east"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="p-andesite"></td>
+				<td class="piston east"></td>
+				<td></td>
+				<td class="slime"></td>
+				<td class="slime"></td>
+				<td class="slime"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+				<td class="p-andesite"></td>
+				<td class="p-andesite"></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<h2>Layer 5</h2>
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="redstone"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="redstone"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td class="redstone"></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		
+		<div class="footnotes">
+			<h3>Notes</h3>
+			<ol>
+				<li>Place this block last, when you want to start the engine</li>
+			</ol>
+		</div>
+	</body>
+</html>

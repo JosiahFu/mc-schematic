@@ -1,0 +1,284 @@
+body {
+	margin: 10px;
+	font-size: 11px;
+}
+
+h3 {
+	color: red;
+}
+
+td {
+	cursor: pointer;
+	border: none;
+	padding: 15px;
+}
+
+/*td.selected:before {
+	border: 3px solid yellow;
+	content: " ";
+	padding: 20px;
+	position: absolute;
+	top: 0;
+}*/
+
+td.selected {
+	position: relative;
+	outline: 3px solid yellow;
+	z-index: 10;
+}
+
+td.disabled, td.disabled:hover {
+	opacity: 0.5;
+	background-color: #ccc;
+	cursor: initial;
+}
+
+td.h-arrow {
+	background-image: url(images/h-arrow.png);
+}
+
+td.v-arrow {
+	background-image: url(images/v-arrow.png);
+}
+
+form {
+	width: 200px;
+	height: 200px;
+	margin-top: -121px;
+	margin-left: -121px;
+}
+
+form, .popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	font-size: 1.5em;
+	padding: 20px;
+	background-color: white;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	z-index: 11;
+}
+
+.popup {
+	width: 500px;
+	height: 500px;
+	margin-top: -271px;
+	margin-left: -271px;
+}
+
+.popup .close {
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+}
+
+.popup .close:before, .popup .close:after {
+	content: "";
+	position: absolute;
+	top: 12.5px;
+	left: 0;
+	height: 5px;
+	width: 30px;
+	background-color: black;
+}
+
+.popup .close:after {
+	transform: rotate(45deg);
+}
+
+.popup .close:before {
+	transform: rotate(-45deg);
+}
+
+.popup.hidden {
+	display: none;
+}
+
+.popup .code {
+	font-family: monospace;
+	font-size: 14px;
+	word-break: break-all;
+	user-select: all;
+	word-wrap: break-word;
+	overflow: auto;
+	max-height: 400px;
+	padding: 10px;
+	background-color: #eee;
+	margin-top: 20px;
+}
+
+input, textarea {
+	border: none;
+	border-bottom: lightgray 2px dashed;
+	font: inherit;
+}
+
+textarea {
+	width: 300px;
+	height: 100px;
+	/*margin-top: 50px;*/
+	white-space: pre-wrap;
+}
+
+input:focus, textarea:focus {
+	outline: none;
+	border-bottom: dodgerblue 2px solid;
+}
+
+input[type="number"] {
+	width: 50px;
+}
+
+button, input[type="submit"] {
+	border: none;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #ccc;
+	cursor: pointer;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+button:hover, input[type="submit"]:hover {
+	background-color: #ddd;
+}
+
+input#title {
+	width: 100%;
+}
+
+.edit-gui {
+	margin-bottom: 50px;
+}
+
+.edit-gui table {
+	margin-top: 10px;
+}
+
+.edit-gui h2 {
+	margin-top: 10px;
+}
+
+.edit-gui button {
+	font-size: 1.5em;
+}
+
+.edit-gui button img {
+	height: 30px;
+	width: 30px;
+}
+
+.edit-gui button img {
+	cursor: pointer;
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+}
+
+.edit-gui button:hover img, td:hover {
+	opacity: 0.75;
+}
+
+.palette {
+	position: sticky;
+	top: 0;
+	float: right;
+	z-index: 1;
+	background-color: white;
+}
+
+.palette-title {
+	cursor: pointer;
+	text-align: right;
+}
+
+.palette-title:before {
+	content: " \25bc";
+}
+
+.palette.collapse .palette-title:before {
+	content: " \25b6";
+}
+
+.palette-title::selection {
+	background: initial;
+}
+
+.palette.collapse table {
+	display: none;
+}
+
+.reset {
+	margin-top: 5px;
+}
+
+.disclaimer {
+	color: #888;
+}
+
+@media only screen and (min-width: 400px) {
+	body {
+		margin: 50px;
+		font-size: 16px;
+	}
+	
+	td {
+		padding: 20px;
+	}
+	
+	.edit-gui button img {
+		height: 40px;
+		width: 40px;
+	}	
+}
+
+@media only screen and (min-width: 700px) {
+	body {
+		width: 700px;
+		margin-right: auto;
+		margin-left: auto;
+		padding-left: 50px;
+		padding-right: 50px;
+	}
+	
+	td:hover {
+		background-color: #eee;
+	}
+}
+
+@media only screen and (min-width: 900px) {	
+	input#title {
+		width: 75%;
+	}
+}
+
+@media print {
+	body {
+		margin: 50px;
+	}
+	
+	input {
+		width: 100%;
+	}
+	
+	input, textarea {
+		border: none;
+	}
+	
+	.edit-gui {
+		display: none;
+	}
+	
+	form, .popup {
+		display: none;
+	}
+	
+	td:hover {
+		opacity: 1;
+		background-color: initial;
+	}
+}

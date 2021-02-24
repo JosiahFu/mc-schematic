@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>MC Schematics</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="blocks.css">
+		<link rel="stylesheet" type="text/css" href="editor-style.css">
+		<script src="editor-script.js"></script>
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+	</head>
+	
+	<body onbeforeunload="if(!saved){return 'You have unsaved progress';}">
+		<!--h3>MC Schematic</h3-->
+		<h1><input id="title" placeholder="Title here" spellcheck="false" autocomplete="off" onchange="setTitle(this.value)"></h1>
+		
+		<form action="javascript:void(0);" onsubmit="makeTables(height.value, width.value, depth.value);" id="form">
+			<label for="height">Height:</label>
+			<input name="height" type="number" min="1" max="32" step="1" value="8">
+			<br>
+			<label for="width">Width:</label>
+			<input name="width" type="number" min="1" max="32" step="1" value="8">
+			<br>
+			<label for="depth">Depth:</label>
+			<input name="depth" type="number" min="1" max="16" step="1" value="8">
+			<br><br>
+			<input type="submit" value="Make Tables">
+		</form>
+		
+		<div id="popup" class="popup hidden">
+			<div class="close" onclick = "this.parentElement.classList.add('hidden')"></div>
+			<span>Save Code</span><br>
+			<!--span>Copy and paste this into a text file to save it</span><br-->
+			<div id="code" class="code"></div>
+		</div>
+		
+		<div class="edit-gui palette">
+			<h2 class="palette-title" onclick="togglePalette()">Palette</h2>
+			<table id="orient-palette">
+				<tr>
+					<td class="h-arrow north selected disabled" id="north" onclick="chooseOrient('north');"></td>
+					<td class="h-arrow east disabled" id="east" onclick="chooseOrient('east');"></td>
+					<td class="h-arrow south disabled" id="south" onclick="chooseOrient('south');"></td>
+					<td class="h-arrow west disabled" id="west" onclick="chooseOrient('west');"></td>
+					<td class="v-arrow disabled" id="up" onclick="chooseOrient('up')"></td>
+					<td class="v-arrow south disabled" id="down" onclick="chooseOrient('down');"></td>
+				</tr>
+			</table>
+			<table id="block-palette">
+				<tr>
+					<td class="selected" onclick="chooseBlock(this, '');"></td>
+					<td class="iron" onclick="chooseBlock(this, 'iron');"></td>
+					<td class="cobblestone" onclick="chooseBlock(this, 'cobblestone');"></td>
+					<td class="tnt side" onclick="chooseBlock(this, 'tnt');"></td>
+					<td class="slab south" onclick="chooseBlock(this, 'slab')"></td>
+					<td class="glass" onclick="chooseBlock(this, 'glass')"></td>
+				</tr>
+				<tr>
+					<td class="slime" onclick="chooseBlock(this, 'slime');"></td>
+					<td class="honey" onclick="chooseBlock(this, 'honey');"></td>
+					<td class="redstone-b" onclick="chooseBlock(this, 'redstone-b');"></td>
+					<td class="target" onclick="chooseBlock(this, 'target');"></td>
+					<td class="observer up" onclick="chooseBlock(this, 'observer');"></td>
+					<td class="observer side east" onclick="chooseBlock(this, 'observer side');"></td>
+				</tr>
+				<tr>
+					<td class="dispenser up" onclick="chooseBlock(this, 'dispenser');"></td>
+					<td class="dispenser side up" onclick="chooseBlock(this, 'dispenser side');"></td>
+					<td class="dropper up" onclick="chooseBlock(this, 'dropper');"></td>
+					<td class="dropper side up" onclick="chooseBlock(this, 'dropper side');"></td>
+					<td class="hopper" onclick="chooseBlock(this, 'hopper')"></td>
+					<td class="hopper side south" onclick="chooseBlock(this, 'hopper side')"></td>
+				</tr>
+				<tr>
+					<td class="chest north" onclick="chooseBlock(this, 'chest');"></td>
+					<td class="chest side up" onclick="chooseBlock(this, 'chest side');"></td>
+					<td class="r-lamp" onclick="chooseBlock(this, 'r-lamp');"></td>
+					<td class="sculk-sensor north" onclick="chooseBlock(this, 'sculk-sensor');"></td>
+					<td class="day-detector up" onclick="chooseBlock(this, 'day-detector');"></td>
+					<td class="night-detector up" onclick="chooseBlock(this, 'night-detector');"></td>
+				</tr>
+				<tr>
+					<td class="piston north" onclick="chooseBlock(this, 'piston');"></td>
+					<td class="piston-ext east" onclick="chooseBlock(this, 'piston-ext');"></td>
+					<td class="piston-head east" onclick="chooseBlock(this, 'piston-head');"></td>
+					<td class="s-piston north" onclick="chooseBlock(this, 's-piston');"></td>
+					<td class="s-piston-ext east" onclick="chooseBlock(this, 's-piston-ext');"></td>
+					<td class="s-piston-head east" onclick="chooseBlock(this, 's-piston-head');"></td>
+				</tr>
+				<tr>
+					<td class="rail straight" onclick="chooseBlock(this, 'rail straight')"></td>
+					<td class="rail corner" onclick="chooseBlock(this, 'rail corner')"></td>
+					<td class="rail activator" onclick="chooseBlock(this, 'rail activator')"></td>
+					<td class="rail detector" onclick="chooseBlock(this, 'rail detector')"></td>
+					<td class="rail powered" onclick="chooseBlock(this, 'rail powered')"></td>
+					<td class="trapdoor" onclick="chooseBlock(this, 'trapdoor')"></td>
+				</tr>
+				<tr>
+					<td class="redstone-d n" onclick="chooseBlock(this, 'redstone-d n');"></td>
+					<td class="redstone-d l" onclick="chooseBlock(this, 'redstone-d l');"></td>
+					<td class="redstone-d c" onclick="chooseBlock(this, 'redstone-d c');"></td>
+					<td class="redstone-d j" onclick="chooseBlock(this, 'redstone-d j');"></td>
+					<td class="redstone-d cr" onclick="chooseBlock(this, 'redstone-d cr');"></td>
+					<td class="redstone-d side south" onclick="chooseBlock(this, 'redstone-d side');"></td>
+				</tr>
+				<tr>
+					<td class="redstone-t side" onclick="chooseBlock(this, 'redstone-t side');"></td>
+					<td class="redstone-t up" onclick="chooseBlock(this, 'redstone-t');"></td>
+					<td class="repeater" onclick="chooseBlock(this, 'repeater')"></td>
+					<td class="repeater side" onclick="chooseBlock(this, 'repeater side')"></td>
+					<td class="comparator" onclick="chooseBlock(this, 'comparator')"></td>
+					<td class="comparator side" onclick="chooseBlock(this, 'comparator side')"></td>
+				</tr>
+				<tr>
+					<td class="lever" onclick="chooseBlock(this, 'lever')"></td>
+					<td class="button up" onclick="chooseBlock(this, 'button')"></td>
+				</tr>
+				<!--td class="block" onclick="chooseBlock(this, 'block');"></td-->
+			</table>
+		</div>
+		
+		<div class="edit-gui">
+			<button onclick="print();" alt="Print" title="Print"><img src="images/print.png"></button>
+			<button onclick="exportBuild();" alt="Save" title="Save"><img src="images/export.png"></button>
+			<button onclick="importBuild();" alt="Import" title="Import"><img src="images/import.png"></button>
+			<br>
+			<button class="reset" onclick="location.reload();">Reset</button>
+		</div>
+		
+		<div id="tables"></div>
+		
+		<h2>Notes</h2>
+		<textarea placeholder="Type notes here..." id="notes"></textarea>
+		<span class="disclaimer"><br><br>This site is not sponsored by or affilated with Minecraft or Mojang Studios.</span>
+	</body>
+</html>
